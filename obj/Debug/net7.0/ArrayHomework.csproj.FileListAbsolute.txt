@@ -1,0 +1,15 @@
+D:\Visual Studio\ArrayHomework\bin\Debug\net7.0\ArrayHomework.exe
+D:\Visual Studio\ArrayHomework\bin\Debug\net7.0\ArrayHomework.deps.json
+D:\Visual Studio\ArrayHomework\bin\Debug\net7.0\ArrayHomework.runtimeconfig.json
+D:\Visual Studio\ArrayHomework\bin\Debug\net7.0\ArrayHomework.dll
+D:\Visual Studio\ArrayHomework\bin\Debug\net7.0\ArrayHomework.pdb
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\ArrayHomework.csproj.AssemblyReference.cache
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\ArrayHomework.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\ArrayHomework.AssemblyInfoInputs.cache
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\ArrayHomework.AssemblyInfo.cs
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\ArrayHomework.csproj.CoreCompileInputs.cache
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\ArrayHomework.dll
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\refint\ArrayHomework.dll
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\ArrayHomework.pdb
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\ArrayHomework.genruntimeconfig.cache
+D:\Visual Studio\ArrayHomework\obj\Debug\net7.0\ref\ArrayHomework.dll
