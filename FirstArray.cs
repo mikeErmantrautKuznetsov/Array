@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ArrayHomework
@@ -167,67 +168,243 @@ namespace ArrayHomework
         //Программа должна работать на основе расширения массива.
         //Внимание, нельзя использовать List<T> и Array.Resize
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Команда 1 - 'exit' выход из программы.");
-            Console.WriteLine("Команда 2 - 'sum' сложит массив чисел.");
-            Console.WriteLine("Команда 3 - 'number' Введите число.");
-            string comandArray = Console.ReadLine().ToLower();
-            string exitComand = "exit";
-            string sumComand = "sum";
-            string numberComand = "number";
-            int tempValue = int.MinValue;
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine("Команда 1 - 'exit' выход из программы.");
+        //    Console.WriteLine("Команда 2 - 'sum' сложит массив чисел.");
+        //    Console.WriteLine("Команда 3 - 'number' Введите число.");
+        //    string comandArray = Console.ReadLine().ToLower();
+        //    string exitComand = "exit";
+        //    string sumComand = "sum";
+        //    string numberComand = "number";
+        //    int tempValue = 0;
+        //    int newIndex = 0;
 
-            while (true)
-            {
-                if (comandArray == numberComand)
-                {
-                    int[] inputNewUserArray = new int[1];
-                    int[] inputUserArray = new int[1];
-                    Console.WriteLine("Введите число ");
-                    string numberArray = Console.ReadLine().ToLower();
-                    if (int.TryParse(numberArray, out int tryNumberArray))
-                    {
-                        Resize(ref inputUserArray, tryNumberArray);
+        //    while (true)
+        //    {
+        //        if (comandArray == numberComand)
+        //        {
+        //            int[] inputUserArray = new int[1];
+        //            string numberArray = Console.ReadLine().ToLower();
 
-                        for (int i = 0; i < inputUserArray.Length; i++)
-                        {
-                            tempValue += tryNumberArray;
-                        }
-                        Console.WriteLine($"Вы вели число {numberArray}");
+        //            if (int.TryParse(numberArray, out int tryNumberArray))
+        //            {
+        //                Resize(ref inputUserArray, newIndex, inputUserArray.Length);
 
-                    }
-                    else if (numberArray == sumComand)
-                    {
-                        Console.WriteLine($"Сумма цикла. {tempValue}");
-                        Console.ReadLine();
-                        break;
-                    }
-                    else if (numberArray == exitComand)
-                    {
-                        Console.WriteLine($"Цикл завершен! ");
-                        Console.Clear();
-                        break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Бездействие. Самое утомительное занятие. ");
-                    Console.ReadLine();
-                    break;
-                }
-            }
-        }
+        //                tempValue += tryNumberArray;
 
-        static void Resize(ref int[] arrayUser, int newSize)
-        {
-            int[] newArray = new int[newSize];
+        //                Console.WriteLine($"Вы вели число {numberArray}");
 
-            for (int i = 0; i < arrayUser.Length && i < newArray.Length; i++)
-            {
-                newArray[i] = arrayUser[i];
-            }
-            arrayUser = newArray;
-        }
+        //            }
+        //            if (numberArray == sumComand)
+        //            {
+        //                Console.WriteLine($"Сумма цикла. {tempValue}");
+        //                Console.ReadLine();
+        //                break;
+        //            }
+        //            else if (numberArray == exitComand)
+        //            {
+        //                Console.WriteLine($"Цикл завершен! ");
+        //                Console.Clear();
+        //                break;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("Бездействие. Самое утомительное занятие. ");
+        //            Console.ReadLine();
+        //            break;
+        //        }
+        //    }
+        //}
+
+        //static void Resize(ref int[] arrayUser, int newSize, int indexOld)
+        //{
+        //    int[] newArray = new int[arrayUser.Length + 1];
+        //    newArray[indexOld] = newSize;
+
+        //    for (int g = 0; g < indexOld; g++)
+        //    {
+        //        newArray[g] = arrayUser[g];
+        //    }
+
+        //    for (int k = indexOld; k < arrayUser.Length; k++)
+        //    {
+        //        newArray[k + 1] = arrayUser[k];
+        //    }
+        //    arrayUser = newArray;
+        //}
+    }
+
+    internal class fiveExercise
+    {
+        // ДЗ: Подмассив повторений чисел
+
+        //В массиве чисел найдите самый длинный подмассив из одинаковых чисел.
+        //Дано 30 чисел.Вывести в консоль сам массив, число, которое само больше раз повторяется подряд и количество повторений.
+        //Дополнительный массив не надо создавать.
+        //Пример 1: {5, 5, 9, 9, 9, 5, 5} - число 9 повторяется 3 раза подряд.
+        //Пример 2: { 5, 5, 5, 3, 3, 3, 3} - число 3 повторяется 4 раза подряд.
+
+        //static void Main(string[] args)
+        //{
+        //    int[] arrayNumbers = new int[30];
+        //    Random random = new Random();
+
+        //    for (int i = 0; i < arrayNumbers.Length; i++)
+        //    {
+        //        arrayNumbers[i] = random.Next(1, 20);
+
+        //        for (int j = 0; j <= arrayNumbers[i]; j++)
+        //        {
+        //            int repeat = j;
+        //            for (int g = i; g <= arrayNumbers[j]; g++)
+        //            {
+        //                if (arrayNumbers[j] == arrayNumbers[i])
+        //                {
+        //                    ++j;
+        //                    Console.Write(arrayNumbers[j] + " ");
+        //                    Console.WriteLine($"число повторилось {repeat} раз.");
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+    }
+
+    internal class sixExercise
+    {
+        //ДЗ: Сортировка чисел
+        //Дан массив чисел(минимум 10 чисел).
+        //Надо вывести в консоль числа отсортированы, от меньшего до большего.
+        //Нельзя использовать Array.Sort.
+        //Используйте пузырьковую сортировку.
+
+        //static void Main(string[] args)
+        //{
+        //    int[] arrayTen = new int[10];
+        //    Random random = new Random();
+        //    int tempValue = 0;
+
+        //    for (int i = 0; i < arrayTen.Length; i++)
+        //    {
+        //        arrayTen[i] = random.Next(1, 20);
+        //        Console.Write(arrayTen[i] + " ");
+        //    }
+        //    Console.WriteLine();
+
+        //    for (int g = 0; g < arrayTen.Length; g++)
+        //    {
+        //        for (int h = 0; h < arrayTen.Length - 1; h++)
+        //        {
+        //            if (arrayTen[h] > arrayTen[h + 1])
+        //            {
+        //                tempValue = arrayTen[h];
+        //                arrayTen[h] = arrayTen[h + 1];
+        //                arrayTen[h + 1] = tempValue;
+        //            }
+        //        }
+
+        //    }
+
+        //    for (int c = 0; c < arrayTen.Length; c++)
+        //    {
+        //        Console.Write(arrayTen[c] + " ");
+        //    }
+        //}
+    }
+
+    internal class sevenExercise
+    {
+        //ДЗ: Split
+
+        //Дана строка с текстом, используя метод строки String.Split()
+        //получить массив слов, которые разделены пробелом в тексте
+        //и вывести массив, каждое слово с новой строки.
+
+        //static void Main(string[] args)
+        //{
+        //    string words = "I'm really tired.";
+
+        //    char[] charChar = new char[] {'.', ' '};
+
+        //    foreach (var point in words.Split(charChar, StringSplitOptions.RemoveEmptyEntries))
+        //    {
+        //        Console.WriteLine(point);
+        //    }
+
+        //    Console.Read();
+        //}
+    }
+
+    internal class eightExercise
+    {
+        //ДЗ: Сдвиг значений массива
+        //Дан массив чисел.
+        //Нужно его сдвинуть циклически
+        //на указанное пользователем значение позиций влево,
+        //не используя других массивов.
+        //Пример для сдвига один раз:
+        //{ 1, 2, 3, 4} => {2, 3, 4, 1}
+
+        //static void Main(string[] args)
+        //{
+        //    int[] arrayAgain = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        //    int numberClient;
+        //    int temp;
+
+        //    for (int i = 0; i < arrayAgain.Length; i++)
+        //    {
+        //        Console.Write(arrayAgain[i] + " ");
+        //    }
+
+        //    Console.WriteLine();
+        //    Console.WriteLine("Введите значение на которое нужно сдвинуть крайнее левое число, вправо.");
+        //    int index = Convert.ToInt32(Console.ReadLine());
+
+        //    for (int i = 0; i < arrayAgain.Length; i++)
+        //    {
+        //        numberClient = arrayAgain[0]; 
+        //        temp = arrayAgain[index]; 
+        //        arrayAgain[index] = numberClient;
+        //        arrayAgain[0] = temp;
+
+        //        Console.WriteLine();
+        //        Console.Write(arrayAgain[i] + " ");
+        //    }
+        //}
+    }
+
+    internal class nineExercise
+    {
+        //    //ДЗ: Скобочное выражение
+        //    //Дана строка из символов '(' и ')'. Определить, является ли она корректным скобочным выражением.
+        //    //Определить максимальную глубину вложенности скобок.
+        //    //Текущая глубина равняется разности открывающихся и закрывающихся скобок в момент подсчета каждого символа.
+        //    //К символу в строке можно обратиться по индексу
+        //    //Пример “(()(()))” - строка корректная и максимум глубины равняется 3.
+        //    //Пример некорректных строк: "(()", "())", ")(", "(()))(()"
+
+        //static void Main(string[] args)
+        //{
+        //    char[] args2 = { '(', ')', '(', ')', '(', ')', '(', ')', '(', ')', ')', '(' };
+        //    int maxInside = 0;
+        //    int depth = 0;
+
+        //    for (int i = 0; i < args2.Length - 1; i++)
+        //    {
+        //        if (i != '(' + ')')
+        //        {
+        //            ++maxInside;
+        //        }
+        //        Console.Write(args2[i] + " ");
+        //        depth = maxInside / 2;
+        //    }
+        //    Console.WriteLine();
+        //    Console.WriteLine(depth);
+
+        //}
+
     }
 }
